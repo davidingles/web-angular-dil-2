@@ -17,11 +17,19 @@
     .dil-span{
         color: var(--auxiliar1);
     }
+    .dil-a{
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+    }
 </style>
 
 <div class="dil-navbar flex items-center">
     <img class="dil-img p-2 animate__animated animate__bounce" src="../../../assets/svg/homeCasaBlanco.svg" alt="logo de la auxiliar">
     <span class="dil-span">Auxliar Manipuladora del Cartón</span>
+    <div >
+            <a class="dil-a" *ngFor="let item of nav" [routerLink]="item.name">{{item.alias}}</a>
+    </div>
 </div>
 <p>layout works!</p>
 
