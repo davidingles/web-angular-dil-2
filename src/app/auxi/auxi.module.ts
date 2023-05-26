@@ -1,20 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContactoComponent } from './contacto/contacto.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
 import { ProductosComponent } from './pages/productos/productos.component';
+import { LayoutComponent } from './layout/layout.component';
+import { AuxiRoutingModule } from './auxi-routing.module';
 
 
 
 @NgModule({
   declarations: [
     ContactoComponent,
-    ProductosComponent
+    ProductosComponent,
+    LayoutComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AuxiRoutingModule
   ],
   exports: [
-    ProductosComponent
+    ProductosComponent,
+    ContactoComponent
   ]
 })
 export class AuxiModule { }

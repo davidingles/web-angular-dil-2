@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuxiModule } from './auxi/auxi.module';
-
+import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -13,9 +14,11 @@ import { AuxiModule } from './auxi/auxi.module';
   ],
   imports: [
     BrowserModule,
+    AuxiModule,
     AppRoutingModule,
-    AuxiModule
+    SharedModule,
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
