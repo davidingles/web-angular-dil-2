@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 
+interface Nav {
+  name: string;
+  alias: string;
+}
 
 
 @Component({
@@ -11,7 +15,7 @@ import { Component } from '@angular/core';
 export class LayoutComponent {
 
   // public menu = ['auxi-productos', 'auxi-contacto'];
-  public nav = [
+  public nav:Nav[] = [
     {
       name: 'auxi-productos',
       alias: 'Productos',
